@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Sidebar from "./Components/Sidebar";
+import MainPage from "./Components/MainPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ display: "flex" }}>
+      <div style={{ flex: 2 }}>
+        <Sidebar />
+      </div>
+      <div style={{ flex: 9 }}>
+        {/* <Sidebar/> */}
+        <MainPage />
+      </div>
     </div>
   );
 }
